@@ -33,8 +33,16 @@ require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
 
-
-
+if (process.env.NODE_ENV == 'production') {
+	// express will serve up production assets
+	// like our main.js file
+	app.use(express.static('client/build'));
+	// express will serve up index.html
+	const path = require('path');
+	app.get('*', (req, res) => {
+		res.sendFile(path.resolve(_dirname, 'client', 'build', 'index.html'))
+	}); 
+}
 
 
 
