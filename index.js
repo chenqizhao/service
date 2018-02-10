@@ -5,6 +5,8 @@ const keys = require('./config/keys');
 const cookieSession = require('cookie-session')
 const passport = require('passport')
 
+const bodyParser = require('body-parser')
+
 // order is important
 require('./models/User')
 require( './services/passport'); 
@@ -16,7 +18,7 @@ mongoose.connection.on('connected', function(){
 	console.log('mlab connect success')
 })
 const app = express()
-
+app.use(bodyParser.json());
 app.use(
 	cookieSession({
 		maxAge: 60 * 60 * 1000, // 60 min, unit is ms
@@ -28,7 +30,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
-
+require('./routes/billingRoutes')(app);
 
 
 
