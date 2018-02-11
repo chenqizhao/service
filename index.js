@@ -9,7 +9,9 @@ const bodyParser = require('body-parser')
 
 // order is important
 require('./models/User')
-require( './services/passport'); 
+require('./services/passport')
+require('./models/Survey')
+
 
 // const authRoutes = require('./routes/authRoutes')
 
@@ -31,6 +33,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 
 if (process.env.NODE_ENV == 'production') {

@@ -25,4 +25,8 @@ module.exports = app => {
 	app.get('/api/current_user', (req, res) => { // req is incoming request, res is outgoing response
 		res.send(req.user);
 	});
+	// hiring page
+	app.get('/api/hiring', (req, res) => {
+		res.send(req.user);
+	});
 };
