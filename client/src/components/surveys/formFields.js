@@ -4,5 +4,5 @@ export default [
   { label: 'Subject', name: 'subject' },
   { label: 'Email Body', name: 'body' },
   { label: 'Recipient List', name: 'recipients' },
-  { label: 'Organization', name: 'organization'}
+  { label: 'From Email', name: 'fromEmail'}
 ];
