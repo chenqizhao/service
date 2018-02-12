@@ -14,7 +14,7 @@ class Footer extends Component {
               </div>
               <div className="col l4 offset-l2 s12">
                 <ul>
-                  <li><a className="grey-text text-lighten-3" href="www.linkedin.com/in/chenqizhao">About me</a></li>
+                  <li><a className="grey-text text-lighten-3" href="https://www.linkedin.com/in/chenqizhao">About me</a></li>
                   <li><a className="grey-text text-lighten-3" href="https://github.com/chenqizhao">More on Github</a></li>
                 </ul>
               </div>
