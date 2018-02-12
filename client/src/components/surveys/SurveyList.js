@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
+import Background from '../materials/singleback.jpg';
+var sectionStyle = {
+  width: "100%",
+  height: "1200px",
+  backgroundImage: `url(${Background})`,
+  backgroundSize: 'contain, cover',
+  overflow: 'hidden'
+};
 
 class SurveyList extends Component {
   componentDidMount() {
     this.props.fetchSurveys();
   }
+
 
 
   renderSurveys() {
@@ -37,8 +46,10 @@ class SurveyList extends Component {
 
   render() {
     return (
-      <div style={{backgroundColor: '#D3D3D3'}}>
+      <div style={ sectionStyle }>
+      <div>
         {this.renderSurveys()}
+      </div>
       </div>
     );
   }
