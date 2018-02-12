@@ -12,10 +12,12 @@ var sectionStyle = {
 };
 	return( 
 		<section style={ sectionStyle }>
+		<div>
 		<div style = {{ textAlign: 'center', color: "white"}}>
 			<Link to="/surveys" className="btn-flat waves-teal white-text">
 	            Connect Your Customers
 	        </Link>
+		</div>
 		</div>
 		</section>
 	);
