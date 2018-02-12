@@ -17,15 +17,17 @@ class SurveyNew extends Component {
     }
 
     return (
+      <div style={{height:'500px', width:'800px', margin:'0 auto'}}>
       <SurveyForm
         onSurveySubmit={() => this.setState({ showFormReview: true })}
       />
+      </div>
     );
   }
 
   render() {
     return (
-      <div>
+      <div style={{height: "600px", backgroundColor: '#D3D3D3'}}>
         {this.renderContent()}
       </div>
     );

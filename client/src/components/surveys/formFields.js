@@ -1,7 +1,8 @@
 // the fields of our form
 export default [
-  { label: 'Campaign Title', name: 'title' },
-  { label: 'Subject Line', name: 'subject' },
+  { label: 'Project Title', name: 'title' },
+  { label: 'Subject', name: 'subject' },
   { label: 'Email Body', name: 'body' },
-  { label: 'Recipient List', name: 'recipients' }
+  { label: 'Recipient List', name: 'recipients' },
+  { label: 'Organization', name: 'organization'}
 ];
